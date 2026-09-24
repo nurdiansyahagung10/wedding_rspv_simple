@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f1e7">
+    <meta name="description"
+        content="Undangan Pernikahan Christy Audy Valentine & Gideon Mula Gabe Sitorus — 12 Desember 2026">
+    <title>Christy & Gideon — Wedding Invitation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: '#f8f3ea',
+                        paper: '#fffdf8',
+                        gold: '#a87935',
+                        goldDark: '#8b642e',
+                        goldLight: '#c9a25b',
+                        goldBorder: '#d8c7ad',
+                        ink: '#332d27',
+                        inkMuted: '#776e63',
+                        inkNav: '#6f6458',
+                        lineColor: '#ded2c1',
+                        footerBg: '#eee4d5',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-active-primary {
+            background-color: #a87935 !important;
+            color: #ffffff !important;
+        }
+
+        .carousel-slide {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        @keyframes rotateMusic {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .music-spinning {
+            animation: rotateMusic 4s linear infinite;
+        }
+    </style>
+</head>
+
+<body id="pageBody" class="bg-ivory text-ink font-sans m-0 overflow-hidden">
+
+    <!-- ================= COVER / GATE SECTION ================= -->
+    <section id="coverGate"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-[radial-gradient(circle_at_50%_20%,#fffdf8_0%,#f8f3ea_55%,#eee4d5_100%)] px-5 text-center transition-transform duration-1000 ease-in-out">
+        <div
+            class="absolute w-[360px] h-[360px] border border-goldLight/40 rounded-full -left-[150px] top-[10%] pointer-events-none">
+        </div>
+        <div
+            class="absolute w-[360px] h-[360px] border border-goldLight/40 rounded-full -right-[150px] bottom-[10%] pointer-events-none">
+        </div>
+
+        <div class="max-w-md w-full relative z-10 py-10">
+            <div class="text-[11px] sm:text-[12px] tracking-[0.35em] uppercase text-gold font-medium mb-3">
+                The Wedding Of
+            </div>
+
+            <h1 class="font-serif text-goldDark text-4xl sm:text-6xl leading-tight my-2 font-normal">
+                Christy &amp; Gideon
+            </h1>
+
+            <div class="text-xs tracking-[0.25em] uppercase text-ink mt-3 font-medium">
+                12 Desember 2026
+            </div>
+
+            <!-- Kartu Tamu Penerima -->
+            <div
+                class="mt-8 mb-8 p-5 bg-paper/90 border border-goldBorder rounded-2xl shadow-[0_15px_35px_rgba(110,77,32,0.08)]">
+                <span class="text-xs text-inkMuted block mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
+                <p id="coverGuestName" class="font-serif text-2xl sm:text-3xl text-goldDark font-semibold"></p>
+                </p>
+                <div id="coverBadgeWrapper" class="mt-2.5">
+                    <span id="coverGuestCategoryBadge"
+                        class="inline-block px-3 py-1 bg-gold/15 text-goldDark text-[10px] tracking-widest uppercase rounded-full font-semibold">
+                        Nasional Umum
+                    </span>
+                </div>
+            </div>
+
+            <button type="button" onclick="unlockInvitation()"
+                class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gold text-white border border-gold rounded-full font-semibold text-xs tracking-wider uppercase shadow-md hover:bg-goldDark hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <!-- ================= KONTEN UTAMA ================= -->
+
+    <!-- Navbar Sticky -->
+    <nav id="mainNav"
+        class="fixed top-0 left-0 right-0 z-20 bg-paper/90 backdrop-blur-md border-b border-goldBorder/30 hidden">
+        <div
+            class="max-w-6xl mx-auto px-5 py-3.5 flex justify-center items-center gap-3 sm:gap-6 text-[9px] sm:text-[11px] uppercase tracking-[0.12em] text-inkNav overflow-x-auto whitespace-nowrap">
+            <a href="#home" class="hover:text-gold transition-colors">Beranda</a>
+            <a href="#acara" class="hover:text-gold transition-colors">Acara</a>
+            <a href="#lokasi" class="hover:text-gold transition-colors">Lokasi</a>
+            <a href="#gallery" class="hover:text-gold transition-colors">Galeri</a>
+            <a href="#rsvp" class="hover:text-gold transition-colors">Konfirmasi</a>
+            <a href="#gift" class="hover:text-gold transition-colors">Amplop</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="home"
+        class="min-h-screen grid place-items-center relative overflow-hidden bg-[radial-gradient(circle_at_50%_20%,#fffdf8_0%,#f8f3ea_55%,#eee4d5_100%)]">
+        <div
+            class="absolute w-[330px] h-[330px] border border-goldLight/40 rounded-full -left-[170px] top-[10%] pointer-events-none">
+        </div>
+        <div
+            class="absolute w-[330px] h-[330px] border border-goldLight/40 rounded-full -right-[170px] bottom-[5%] pointer-events-none">
+        </div>
+
+        <div class="relative z-10 max-w-3xl text-center px-5 pt-24 pb-16">
+            <div class="text-[12px] tracking-[0.35em] uppercase text-gold font-medium">The Wedding Of</div>
+            <h1 class="font-serif text-goldDark text-5xl sm:text-7xl md:text-8xl leading-tight my-4 font-normal">
+                Christy Audy Valentine
+                <span class="block text-[0.55em] text-goldLight my-2 font-serif">&amp;</span>
+                Gideon Mula Gabe Sitorus
+            </h1>
+            <div class="text-[13px] tracking-[0.25em] uppercase text-ink mt-6 font-medium">12 Desember 2026</div>
+            <p id="guestText" class="mt-4 text-inkMuted text-sm">Kepada Yth. Tamu Undangan</p>
+        </div>
+    </header>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="py-20 px-5">
+        <div class="text-center mb-10">
+            <div class="text-[11px] tracking-[0.28em] uppercase text-gold font-medium">Save the Date</div>
+            <h2 class="font-serif text-4xl sm:text-5xl my-2 font-normal">Menuju Hari Bahagia</h2>
+            <div class="text-gold tracking-[0.5em] text-sm">✦ ✦ ✦</div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-3xl mx-auto">
+            <div class="bg-paper border border-lineColor rounded-2xl p-4 sm:p-5 text-center shadow-sm">
+                <strong id="days" class="block font-serif text-3xl sm:text-5xl font-medium text-goldDark">—</strong>
+                <span class="text-[10px] uppercase tracking-widest text-inkMuted">Hari</span>
+            </div>
+            <div class="bg-paper border border-lineColor rounded-2xl p-4 sm:p-5 text-center shadow-sm">
+                <strong id="hours" class="block font-serif text-3xl sm:text-5xl font-medium text-goldDark">—</strong>
+                <span class="text-[10px] uppercase tracking-widest text-inkMuted">Jam</span>
+            </div>
+            <div class="bg-paper border border-lineColor rounded-2xl p-4 sm:p-5 text-center shadow-sm">
+                <strong id="mins" class="block font-serif text-3xl sm:text-5xl font-medium text-goldDark">—</strong>
+                <span class="text-[10px] uppercase tracking-widest text-inkMuted">Menit</span>
+            </div>
+            <div class="bg-paper border border-lineColor rounded-2xl p-4 sm:p-5 text-center shadow-sm">
+                <strong id="secs" class="block font-serif text-3xl sm:text-5xl font-medium text-goldDark">—</strong>
+                <span class="text-[10px] uppercase tracking-widest text-inkMuted">Detik</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rangkaian Acara Section -->
+    <section id="acara" class="pb-20">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-10">
+                <div class="text-[11px] tracking-[0.28em] uppercase text-gold font-medium">Rangkaian Acara</div>
+                <h2 class="font-serif text-4xl sm:text-5xl my-2 font-normal">Two Hearts, One Journey</h2>
+                <div class="text-gold">✦</div>
+            </div>
+
+            <!-- Banner Notifikasi Penataan Venue Khusus -->
+            <div id="venueNoticeBox"
+                class="max-w-3xl mx-auto mb-8 p-4 rounded-2xl border text-sm text-center transition-all bg-paper border-gold/40">
+                <span class="font-semibold text-goldDark block mb-0.5" id="venueNoticeTitle">Informasi Lokasi
+                    Resepsi</span>
+                <span id="venueNoticeDesc" class="text-inkMuted text-xs leading-relaxed">
+                    Khusus keluarga & tamu umum diselenggarakan di Area Tenda Utama (Lantai Dasar).
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: Pemberkatan -->
+                <div
+                    class="bg-paper border border-lineColor rounded-3xl p-7 sm:p-8 shadow-[0_15px_40px_rgba(110,77,32,0.06)] flex flex-col justify-between">
+                    <div>
+                        <div class="text-2xl text-gold mb-2">✦</div>
+                        <h3 class="font-serif text-3xl mb-2 font-normal">Holy Matrimony</h3>
+                        <div class="text-inkMuted text-sm leading-relaxed">
+                            <b class="text-ink">Sabtu, 12 Desember 2026</b><br>
+                            08.30 WIB<br><br>
+                            <b class="text-ink">GKI Maulana Yusuf<br>Bakal Jemaat Kawaluyaan</b>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a class="inline-flex items-center justify-center px-5 py-2.5 border border-gold rounded-full text-goldDark font-semibold text-xs tracking-wide hover:bg-gold hover:text-white transition"
+                            target="_blank" href="https://share.google/tMvZXZYjp9We7z9h7">
+                            Buka Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Acara Adat -->
+                <div
+                    class="bg-paper border border-lineColor rounded-3xl p-7 sm:p-8 shadow-[0_15px_40px_rgba(110,77,32,0.06)] flex flex-col justify-between">
+                    <div>
+                        <div class="text-2xl text-gold mb-2">✦</div>
+                        <h3 class="font-serif text-3xl mb-2 font-normal">Acara Adat Nikah</h3>
+                        <div class="text-inkMuted text-sm leading-relaxed">
+                            <b class="text-ink">Sabtu, 12 Desember 2026</b><br>
+                            11.00 WIB – selesai<br><br>
+                            <b class="text-ink">Gedung Serba Guna Maduma Naramamora</b><br>
+
+                            <div class="mt-2.5 p-3 rounded-xl bg-ivory border border-goldBorder/60"
+                                id="adatLocationBox">
+                                <span class="font-semibold text-goldDark block text-xs" id="adatLocationArea">Area:
+                                    Tenda Utama (Lantai Dasar)</span>
+                                <span class="text-[11px] text-inkMuted" id="adatLocationNote">Untuk keluarga besar KSP &
+                                    tamu umum nasional.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a class="inline-flex items-center justify-center px-5 py-2.5 border border-gold rounded-full text-goldDark font-semibold text-xs tracking-wide hover:bg-gold hover:text-white transition"
+                            target="_blank" href="https://share.google/j0V7PsyMwFS6tsyyS">
+                            Buka Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GALERI FOTO (SEAMLESS INFINITE CAROUSEL) ================= -->
+    <section id="gallery" class="py-20 bg-footerBg/35 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-10">
+                <div class="text-[11px] tracking-[0.28em] uppercase text-gold font-medium">Sweet Moments</div>
+                <h2 class="font-serif text-4xl sm:text-5xl my-2 font-normal">Galeri Foto</h2>
+                <div class="text-gold">✦</div>
+                <p class="text-xs text-inkMuted mt-1">Sentuh &amp; geser untuk melihat momen kebahagiaan kami</p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto group" id="carouselWrapper">
+                <div class="overflow-hidden w-full rounded-2xl">
+                    <div id="infiniteTrack" class="flex select-none cursor-grab active:cursor-grabbing">
+                        <div class="carousel-item shrink-0 px-2 box-border w-[85%] sm:w-[50%] md:w-[33.333%]">
+                            <div
+                                class="h-[390px] rounded-2xl overflow-hidden border border-goldBorder bg-paper shadow-md">
+                                <img src="./storages/images/img1.jpeg" alt="Moment 1"
+                                    onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=700&q=80'"
+                                    class="w-full h-full object-cover pointer-events-none">
+                            </div>
+                        </div>
+                        <div class="carousel-item shrink-0 px-2 box-border w-[85%] sm:w-[50%] md:w-[33.333%]">
+                            <div
+                                class="h-[390px] rounded-2xl overflow-hidden border border-goldBorder bg-paper shadow-md">
+                                <img src="./storages/images/img2.jpeg" alt="Moment 2"
+                                    onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80'"
+                                    class="w-full h-full object-cover pointer-events-none">
+                            </div>
+                        </div>
+                        <div class="carousel-item shrink-0 px-2 box-border w-[85%] sm:w-[50%] md:w-[33.333%]">
+                            <div
+                                class="h-[390px] rounded-2xl overflow-hidden border border-goldBorder bg-paper shadow-md">
+                                <img src="./storages/images/img3.jpeg" alt="Moment 3"
+                                    onerror="this.src='https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=700&q=80'"
+                                    class="w-full h-full object-cover pointer-events-none">
+                            </div>
+                        </div>
+                        <div class="carousel-item shrink-0 px-2 box-border w-[85%] sm:w-[50%] md:w-[33.333%]">
+                            <div
+                                class="h-[390px] rounded-2xl overflow-hidden border border-goldBorder bg-paper shadow-md">
+                                <img src="./storages/images/img4.jpeg" alt="Moment 4"
+                                    onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=700&q=80'"
+                                    class="w-full h-full object-cover pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="prevSlideBtn" aria-label="Foto Sebelumnya"
+                    class="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full border border-gold bg-paper text-gold shadow-md flex items-center justify-center hover:bg-gold hover:text-white transition active:scale-95">
+                    ‹
+                </button>
+                <button type="button" id="nextSlideBtn" aria-label="Foto Berikutnya"
+                    class="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full border border-gold bg-paper text-gold shadow-md flex items-center justify-center hover:bg-gold hover:text-white transition active:scale-95">
+                    ›
+                </button>
+
+                <div id="carouselDots" class="flex justify-center items-center gap-2 mt-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="pb-20">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-10">
+                <div class="text-[11px] tracking-[0.28em] uppercase text-gold font-medium">RSVP</div>
+                <h2 class="font-serif text-4xl sm:text-5xl my-2 font-normal">Konfirmasi Kehadiran</h2>
+                <div class="text-gold">✦</div>
+            </div>
+
+            <div
+                class="bg-paper border border-lineColor rounded-3xl p-7 sm:p-9 max-w-xl mx-auto shadow-[0_15px_40px_rgba(110,77,32,0.06)]">
+
+                <label class="block text-xs font-semibold uppercase tracking-wider text-inkMuted mb-1">
+                    Kelompok Undangan &amp; Lokasi Resepsi
+                </label>
+                <p class="text-[11px] text-inkMuted mb-3">Pilih kelompok undangan Anda untuk menentukan area tempat
+                    duduk:</p>
+
+                <div class="grid grid-cols-1 gap-2.5 mb-5">
+                    <label id="catLabelUmum"
+                        class="cursor-pointer flex flex-col p-3.5 rounded-xl border border-gold bg-gold/5 transition select-none">
+                        <div class="flex items-center gap-2.5">
+                            <input type="radio" name="guestCategory" value="Nasional Umum" checked
+                                onchange="updateCategorySelection()" class="accent-gold w-4 h-4 cursor-pointer">
+                            <span class="text-xs font-semibold text-ink">Nasional Umum (Keluarga Besar KSP /
+                                Umum)</span>
+                        </div>
+                        <span class="text-[11px] text-inkMuted ml-6 mt-1">
+                            Area Tenda (Lantai Dasar) · Makanan Halal Tradisional
+                        </span>
+                    </label>
+
+                    <label id="catLabelPengantin"
+                        class="cursor-pointer flex flex-col p-3.5 rounded-xl border border-lineColor transition bg-white select-none">
+                        <div class="flex items-center gap-2.5">
+                            <input type="radio" name="guestCategory" value="Nasional Tamu Pengantin"
+                                onchange="updateCategorySelection()" class="accent-gold w-4 h-4 cursor-pointer">
+                            <span class="text-xs font-semibold text-ink">Nasional Tamu Pengantin (Teman &amp;
+                                Kolega)</span>
+                        </div>
+                        <span class="text-[11px] text-inkMuted ml-6 mt-1">
+                            Lantai 2 Gedung · Termasuk Stand Menu Non-Halal
+                        </span>
+                    </label>
+                </div>
+
+                <label for="rsvpName"
+                    class="block text-xs font-semibold uppercase tracking-wider text-inkMuted mb-1">Nama Tamu</label>
+                <input id="rsvpName" type="text" placeholder="Nama Anda" autocomplete="name"
+                    class="w-full px-3.5 py-3 border border-lineColor rounded-xl mb-3.5 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold">
+
+                <label class="block text-xs font-semibold uppercase tracking-wider text-inkMuted mb-1">Kehadiran</label>
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                    <button type="button" id="yesBtn" onclick="setAttendance(true)"
+                        class="btn-active-primary px-4 py-3 border border-gold rounded-full font-semibold text-xs tracking-wide transition text-center">
+                        Saya Akan Hadir
+                    </button>
+                    <button type="button" id="noBtn" onclick="setAttendance(false)"
+                        class="px-4 py-3 border border-gold rounded-full text-goldDark font-semibold text-xs tracking-wide hover:bg-gold/10 transition text-center">
+                        Tidak Dapat Hadir
+                    </button>
+                </div>
+
+                <label class="block text-xs font-semibold uppercase tracking-wider text-inkMuted text-center">Jumlah
+                    Tamu</label>
+                <div class="flex items-center justify-center gap-5 my-3">
+                    <button type="button" onclick="changeGuests(-1)"
+                        class="w-10 h-10 flex items-center justify-center border border-gold rounded-full text-goldDark text-lg hover:bg-gold hover:text-white transition">
+                        −</button>
+                    <strong id="guestCount"
+                        class="font-serif text-4xl text-goldDark w-8 text-center font-normal">1</strong>
+                    <button type="button" onclick="changeGuests(1)"
+                        class="w-10 h-10 flex items-center justify-center border border-gold rounded-full text-goldDark text-lg hover:bg-gold hover:text-white transition">
+                        +</button>
+                </div>
+
+                <label for="rsvpWish" class="block text-xs font-semibold uppercase tracking-wider text-inkMuted mb-1">
+                    Ucapan &amp; Doa <span class="text-xs normal-case text-inkMuted/70">(opsional)</span>
+                </label>
+                <textarea id="rsvpWish" rows="4" placeholder="Tuliskan ucapan untuk Christy & Gideon..."
+                    class="w-full px-3.5 py-3 border border-lineColor rounded-xl mb-4 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold"></textarea>
+
+                <button type="button" onclick="sendRSVP()"
+                    class="w-full py-3.5 bg-gold text-white border border-gold rounded-full font-semibold text-xs tracking-wider uppercase hover:opacity-90 shadow-sm transition">
+                    Kirim Konfirmasi via WhatsApp
+                </button>
+                <p id="rsvpError" class="text-xs text-[#9b4d35] mt-3 text-center"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Gift (Amplop Digital) -->
+    <section id="gift" class="pb-20">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-10">
+                <div class="text-[11px] tracking-[0.28em] uppercase text-gold font-medium">Wedding Gift</div>
+                <h2 class="font-serif text-4xl sm:text-5xl my-2 font-normal">Amplop Digital</h2>
+                <div class="text-gold">✦</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <!-- Rekening Pengantin Pria -->
+                <div
+                    class="bg-paper border border-lineColor rounded-3xl p-8 text-center shadow-[0_15px_40px_rgba(110,77,32,0.06)]">
+                    <div class="text-gold font-bold tracking-wider text-sm">BANK CENTRAL ASIA</div>
+                    <div class="font-serif font-semibold text-3xl tracking-wide my-2">7771 753 322</div>
+                    <p class="text-inkMuted text-sm mb-4">a.n. Gideon Mula Gabe Sitorus</p>
+                    <button onclick="copyAccount('7771753322','copyMsg1')"
+                        class="px-5 py-2.5 bg-gold text-white border border-gold rounded-full font-semibold text-xs tracking-wide hover:opacity-90 transition">
+                        Salin Nomor Rekening
+                    </button>
+                    <p id="copyMsg1" class="text-xs text-inkMuted mt-3 min-h-[1rem]"></p>
+                </div>
+
+                <!-- Rekening Pengantin Wanita -->
+                <div
+                    class="bg-paper border border-lineColor rounded-3xl p-8 text-center shadow-[0_15px_40px_rgba(110,77,32,0.06)]">
+                    <div class="text-gold font-bold tracking-wider text-sm">BANK CENTRAL ASIA</div>
+                    <div class="font-serif font-semibold text-3xl tracking-wide my-2">4341 180 320</div>
+                    <p class="text-inkMuted text-sm mb-4">a.n. Christy Audy Valentine</p>
+                    <button onclick="copyAccount('4341180320','copyMsg2')"
+                        class="px-5 py-2.5 bg-gold text-white border border-gold rounded-full font-semibold text-xs tracking-wide hover:opacity-90 transition">
+                        Salin Nomor Rekening
+                    </button>
+                    <p id="copyMsg2" class="text-xs text-inkMuted mt-3 min-h-[1rem]"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-5 text-center bg-footerBg">
+        <div class="font-serif text-4xl sm:text-5xl text-goldDark mb-2 font-normal">Christy &amp; Gideon</div>
+        <p class="text-xs text-inkMuted leading-relaxed">Dua hati · Satu tujuan · Sepanjang jalan</p>
+        <div class="text-gold my-2">✦</div>
+        <p class="text-xs text-inkMuted leading-relaxed">Terima kasih atas doa, kasih, dan kehadiran Anda.</p>
+    </footer>
+
+    <!-- Floating Audio Control Button -->
+    <div class="fixed right-5 bottom-5 z-30">
+        <button id="musicBtn" aria-label="Putar musik" onclick="toggleMusic()"
+            class="w-12 h-12 rounded-full border border-gold bg-[#fffaf2] text-gold shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition">
+            ♫
+        </button>
+    </div>
+
+    <!-- ================= DUAL AUDIO ENGINE (HTML5 Native + YT Fallback) ================= -->
+    <!-- 1. HTML5 Native Audio: Anda dapat mengganti src dengan 'music.mp3' di folder web Anda -->
+    <audio id="weddingAudio" loop preload="auto">
+        <source src="./storages/sounds/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 2. Iframe Fallback YouTube (Menggunakan IFrame API Resmi agar auto-play tidak diblokir browser) -->
+    <div id="ytPlayerContainer" class="fixed -left-[9999px] -bottom-[9999px] opacity-0 pointer-events-none">
+        <div id="ytPlayer"></div>
+    </div>
+
+    <!-- Load YouTube Iframe API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        const RSVP_URL = "";
+        const RSVP_WA = "6283821391107";
+        let attendance = true;
+        let guestCount = 1;
+        const target = new Date("2026-12-12T08:30:00+07:00").getTime();
+
+        let isAudioPlaying = false;
+        const audioElement = document.getElementById("weddingAudio");
+        const musicBtn = document.getElementById("musicBtn");
+
+
+        // Fungsi Play Musik
+        function playMusic() {
+            // Coba putar audio HTML5 terlebih dahulu (bebas lag dan responsif)
+            const playPromise = audioElement.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isAudioPlaying = true;
+                    useYTFallback = false;
+                    updateMusicButtonState(true);
+                }).catch(() => {
+
+                });
+            }
+        }
+
+        // Fungsi Pause Musik
+        function pauseMusic() {
+            if (useYTFallback && ytPlayer && typeof ytPlayer.pauseVideo === "function") {
+                ytPlayer.pauseVideo();
+            } else {
+                audioElement.pause();
+            }
+            isAudioPlaying = false;
+            updateMusicButtonState(false);
+        }
+
+        // Toggle Musik dari Floating Button
+        function toggleMusic() {
+            if (isAudioPlaying) {
+                pauseMusic();
+            } else {
+                playMusic();
+            }
+        }
+
+        function updateMusicButtonState(playing) {
+            if (playing) {
+                musicBtn.textContent = "Ⅱ";
+                musicBtn.classList.add("music-spinning", "bg-gold", "text-white");
+                musicBtn.classList.remove("bg-[#fffaf2]", "text-gold");
+            } else {
+                musicBtn.textContent = "♫";
+                musicBtn.classList.remove("music-spinning", "bg-gold", "text-white");
+                musicBtn.classList.add("bg-[#fffaf2]", "text-gold");
+            }
+        }
+
+        // 1. Fungsi Buka Undangan & Autoplay Musik (User Gesture Valid)
+        function unlockInvitation() {
+            const cover = document.getElementById("coverGate");
+            cover.classList.add("-translate-y-full");
+
+            document.getElementById("pageBody").classList.remove("overflow-hidden");
+            document.getElementById("mainNav").classList.remove("hidden");
+
+            // Putar musik tepat saat tombol ditekan
+            playMusic();
+
+            setTimeout(() => {
+                cover.style.display = "none";
+            }, 1000);
+        }
+
+        // 2. Countdown Timer
+        function tick() {
+            const d = Math.max(0, target - Date.now());
+            document.getElementById("days").textContent = Math.floor(d / 86400000);
+            document.getElementById("hours").textContent = String(Math.floor(d % 86400000 / 3600000)).padStart(2, "0");
+            document.getElementById("mins").textContent = String(Math.floor(d % 3600000 / 60000)).padStart(2, "0");
+            document.getElementById("secs").textContent = String(Math.floor(d % 60000 / 1000)).padStart(2, "0");
+        }
+        tick();
+        setInterval(tick, 1000);
+
+        // ================= 3. SEAMLESS INFINITE CAROUSEL ENGINE =================
+        const track = document.getElementById("infiniteTrack");
+        const prevBtn = document.getElementById("prevSlideBtn");
+        const nextBtn = document.getElementById("nextSlideBtn");
+        const dotsContainer = document.getElementById("carouselDots");
+        const carouselWrapper = document.getElementById("carouselWrapper");
+
+        let originalItems = Array.from(track.children);
+        const originalCount = originalItems.length;
+
+        // Clone nodes di awal & akhir untuk ilusi loop tanpa putus
+        originalItems.forEach(item => {
+            const cloneEnd = item.cloneNode(true);
+            cloneEnd.classList.add("clone");
+            track.appendChild(cloneEnd);
+        });
+        originalItems.slice().reverse().forEach(item => {
+            const cloneStart = item.cloneNode(true);
+            cloneStart.classList.add("clone");
+            track.insertBefore(cloneStart, track.firstChild);
+        });
+
+        let allItems = Array.from(track.children);
+        let currentIndex = originalCount;
+        let isTransitioning = false;
+        let autoPlayTimer = null;
+
+        // Generate titik navigasi
+        for (let i = 0; i < originalCount; i++) {
+            const dot = document.createElement("button");
+            dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-gold w-6' : 'bg-gold/30'}`;
+            dot.setAttribute("aria-label", "Pindah ke foto " + (i + 1));
+            dot.addEventListener("click", () => {
+                moveToSlide(originalCount + i);
+            });
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateDots() {
+            const dots = dotsContainer.children;
+            const normalizedIndex = (currentIndex - originalCount + originalCount) % originalCount;
+            for (let i = 0; i < dots.length; i++) {
+                if (i === normalizedIndex) {
+                    dots[i].className = "w-6 h-2 rounded-full bg-gold transition-all duration-300";
+                } else {
+                    dots[i].className = "w-2 h-2 rounded-full bg-gold/30 transition-all duration-300";
+                }
+            }
+        }
+
+        function getSlideWidth() {
+            return allItems[0].getBoundingClientRect().width;
+        }
+
+        function updateTrackPosition(withAnimation = true) {
+            const width = getSlideWidth();
+            track.style.transition = withAnimation ? "transform 0.5s ease-in-out" : "none";
+            track.style.transform = `translateX(-${currentIndex * width}px)`;
+            updateDots();
+        }
+
+        function moveToSlide(index) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex = index;
+            updateTrackPosition(true);
+        }
+
+        nextBtn.addEventListener("click", () => {
+            moveToSlide(currentIndex + 1);
+            resetAutoPlay();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            moveToSlide(currentIndex - 1);
+            resetAutoPlay();
+        });
+
+        track.addEventListener("transitionend", () => {
+            isTransitioning = false;
+            if (currentIndex >= originalCount * 2) {
+                currentIndex = currentIndex - originalCount;
+                updateTrackPosition(false);
+            }
+            if (currentIndex < originalCount) {
+                currentIndex = currentIndex + originalCount;
+                updateTrackPosition(false);
+            }
+        });
+
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(() => {
+                moveToSlide(currentIndex + 1);
+            }, 3500);
+        }
+        function stopAutoPlay() {
+            if (autoPlayTimer) clearInterval(autoPlayTimer);
+        }
+        function resetAutoPlay() {
+            stopAutoPlay();
+            startAutoPlay();
+        }
+
+        carouselWrapper.addEventListener("mouseenter", stopAutoPlay);
+        carouselWrapper.addEventListener("mouseleave", startAutoPlay);
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener("touchstart", (e) => {
+            stopAutoPlay();
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        track.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 45) {
+                if (diff > 0) {
+                    moveToSlide(currentIndex + 1);
+                } else {
+                    moveToSlide(currentIndex - 1);
+                }
+            }
+            startAutoPlay();
+        });
+
+        window.addEventListener("resize", () => {
+            updateTrackPosition(false);
+        });
+
+        updateTrackPosition(false);
+        startAutoPlay();
+
+        // ================= 4. UPDATE UI KELOMPOK VENUE =================
+        function updateCategorySelection() {
+            const selected = document.querySelector('input[name="guestCategory"]:checked')?.value;
+            const labelUmum = document.getElementById("catLabelUmum");
+            const labelPengantin = document.getElementById("catLabelPengantin");
+
+            const noticeTitle = document.getElementById("venueNoticeTitle");
+            const noticeDesc = document.getElementById("venueNoticeDesc");
+            const areaLabel = document.getElementById("adatLocationArea");
+            const areaNote = document.getElementById("adatLocationNote");
+            const mapHighlight = document.getElementById("mapFloorHighlight");
+            const coverBadge = document.getElementById("coverGuestCategoryBadge");
+
+            if (selected === "Nasional Tamu Pengantin") {
+                labelPengantin.classList.add("border-gold", "bg-gold/5");
+                labelPengantin.classList.remove("border-lineColor", "bg-white");
+                labelUmum.classList.remove("border-gold", "bg-gold/5");
+                labelUmum.classList.add("border-lineColor", "bg-white");
+
+                noticeTitle.textContent = "Lokasi Resepsi Khusus: Lantai 2 Gedung";
+                noticeDesc.textContent = "Untuk rekan/sahabat Christy & Gideon, acara bertempat di Lantai 2 (tersedia stand hidangan spesial / non-halal).";
+                areaLabel.textContent = "Area: Lantai 2 Gedung";
+                areaNote.textContent = "Khusus teman & kolega pengantin (tersedia stand non-halal).";
+                if (mapHighlight) mapHighlight.textContent = "Lantai 2 (Khusus Tamu Teman & Sahabat)";
+                if (coverBadge) coverBadge.textContent = "Tamu Teman & Kolega (Lantai 2)";
+            } else {
+                labelUmum.classList.add("border-gold", "bg-gold/5");
+                labelUmum.classList.remove("border-lineColor", "bg-white");
+                labelPengantin.classList.remove("border-gold", "bg-gold/5");
+                labelPengantin.classList.add("border-lineColor", "bg-white");
+
+                noticeTitle.textContent = "Lokasi Resepsi: Area Tenda (Lantai Dasar)";
+                noticeDesc.textContent = "Untuk keluarga besar KSP & tamu umum nasional diselenggarakan di Area Tenda Utama (Lantai Dasar).";
+                areaLabel.textContent = "Area: Tenda Utama (Lantai Dasar)";
+                areaNote.textContent = "Untuk keluarga besar KSP & tamu umum nasional.";
+                if (mapHighlight) mapHighlight.textContent = "Area Tenda (Lantai Dasar)";
+                if (coverBadge) coverBadge.textContent = "Nasional Umum (Area Tenda)";
+            }
+        }
+
+        // ================= 5. URL PARAMETER HANDLING =================
+        const params = new URLSearchParams(location.search);
+        const guest = params.get("dear");
+        const categoryParam = params.get("cat");
+
+        if (guest) {
+            document.getElementById("coverGuestName").textContent = guest;
+            document.getElementById("guestText").textContent = "Kepada Yth. " + guest;
+            document.title = "Undangan untuk " + guest + " — Christy & Gideon";
+            document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("rsvpName").value = guest;
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const radios = document.getElementsByName("guestCategory");
+            if (categoryParam == 1) {
+                radios[1].checked = true;
+            } else {
+                radios[0].checked = true;
+            }
+            updateCategorySelection();
+        });
+
+        // 6. Copy Rekening
+        function copyAccount(number, id) {
+            navigator.clipboard?.writeText(number);
+            document.getElementById(id).textContent = "Nomor rekening berhasil disalin.";
+            setTimeout(() => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = "";
+            }, 3000);
+        }
+
+        // 7. Kehadiran
+        function setAttendance(value) {
+            attendance = value;
+            const yesBtn = document.getElementById("yesBtn");
+            const noBtn = document.getElementById("noBtn");
+
+            if (value) {
+                yesBtn.classList.add("btn-active-primary");
+                noBtn.classList.remove("btn-active-primary");
+            } else {
+                yesBtn.classList.remove("btn-active-primary");
+                noBtn.classList.add("btn-active-primary");
+            }
+        }
+
+        function changeGuests(delta) {
+            guestCount = Math.max(1, Math.min(10, guestCount + delta));
+            document.getElementById("guestCount").textContent = guestCount;
+        }
+
+        // 8. Kirim Konfirmasi ke WA (Diperbaiki agar pesan tidak terpotong)
+        function sendRSVP() {
+            const nameInput = document.getElementById("rsvpName");
+            const wishInput = document.getElementById("rsvpWish");
+
+            const name = nameInput.value.trim();
+            const wish = wishInput.value.trim();
+
+            const categoryInput = document.querySelector(
+                'input[name="guestCategory"]:checked'
+            );
+
+            const category = categoryInput?.value || "Nasional Umum";
+            const err = document.getElementById("rsvpError");
+
+            if (!name) {
+                err.textContent = "Mohon isi nama Anda terlebih dahulu.";
+                return;
+            }
+
+            err.textContent = "";
+
+            const status = attendance
+                ? "Dengan penuh sukacita, saya akan hadir"
+                : "Dengan penuh hormat, saya mohon maaf belum dapat hadir";
+
+            const locationTag =
+                category === "Nasional Tamu Pengantin"
+                    ? "Lantai 2 (Tamu Teman/Non-Halal)"
+                    : "Area Tenda (Keluarga Besar KSP/Umum)";
+
+            const textMessage =
+                `Dengan penuh sukacita, saya ingin menyampaikan konfirmasi kehadiran saya ` +
+                `di hari istimewa pernikahan Christy & Gideon.\n\n` +
+                `Nama: ${name}\n` +
+                `Kategori Tamu: ${category}\n` +
+                `Area Acara: ${locationTag}\n` +
+                `Konfirmasi Kehadiran: ${status}\n` +
+                `Jumlah Tamu: ${guestCount} orang` +
+                `${wish ? `\n\nUcapan & Doa:\n${wish}` : ""}` +
+                `\n\nSemoga pernikahan Christy & Gideon menjadi awal dari perjalanan ` +
+                `yang penuh cinta, kebahagiaan, dan keberkahan. Semoga setiap langkah ` +
+                `yang dilalui bersama selalu dipenuhi dengan kasih, pengertian, dan ` +
+                `kekuatan untuk saling menemani dalam setiap keadaan.\n\n` +
+                `Terima kasih telah mengundang saya untuk menjadi bagian dari momen ` +
+                `yang begitu istimewa ini. Sampai bertemu di hari bahagia Christy & Gideon. 🤍`;
+
+            const encodedMessage = encodeURIComponent(textMessage);
+
+            // Buka WhatsApp terlebih dahulu
+            window.open(
+                `https://api.whatsapp.com/send/?phone=${RSVP_WA}&text=${encodedMessage}`,
+                "_blank"
+            );
+
+            // =========================
+            // CLEAR FORM / DRAFT
+            // =========================
+
+            nameInput.value = "";
+            wishInput.value = "";
+
+            document
+                .querySelectorAll('input[name="guestCategory"]')
+                .forEach(input => {
+                    input.checked = false;
+                });
+
+            // Reset status kehadiran
+            attendance = false;
+
+            // Reset jumlah tamu
+            guestCount = 1;
+
+            // Kalau ada tampilan jumlah tamu
+            const guestCountElement = document.getElementById("guestCount");
+            if (guestCountElement) {
+                guestCountElement.textContent = guestCount;
+            }
+        }    </script>
+</body>
+
+</html>

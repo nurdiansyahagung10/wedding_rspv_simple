@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css"
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css && shx cp index.html dist/index.html"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +18,8 @@
   },
   "allowScripts": {
     "@parcel/watcher@2.5.1": true
+  },
+  "devDependencies": {
+    "shx": "^0.4.0"
   }
 }
