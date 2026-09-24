@@ -53,6 +53,11 @@
             transition: transform 0.5s ease-in-out;
         }
 
+        #infiniteTrack {
+            touch-action: pan-y;
+            will-change: transform;
+        }
+
         @keyframes rotateMusic {
             from {
                 transform: rotate(0deg);
@@ -673,23 +678,57 @@
         carouselWrapper.addEventListener("mouseleave", startAutoPlay);
 
         let touchStartX = 0;
-        let touchEndX = 0;
+        let touchCurrentX = 0;
+        let isDragging = false;
 
         track.addEventListener("touchstart", (e) => {
+            if (e.touches.length !== 1) return;
+
             stopAutoPlay();
+
             touchStartX = e.touches[0].clientX;
+            touchCurrentX = touchStartX;
+            isDragging = true;
+
+            // Matikan transition saat user sedang swipe
+            track.style.transition = "none";
         }, { passive: true });
 
-        track.addEventListener("touchend", (e) => {
-            touchEndX = e.changedTouches[0].clientX;
-            const diff = touchStartX - touchEndX;
-            if (Math.abs(diff) > 45) {
+        track.addEventListener("touchmove", (e) => {
+            if (!isDragging || e.touches.length !== 1) return;
+
+            touchCurrentX = e.touches[0].clientX;
+
+            const diff = touchCurrentX - touchStartX;
+            const width = getSlideWidth();
+
+            // Gerakkan carousel mengikuti jari
+            track.style.transform =
+                `translateX(calc(-${currentIndex * width}px + ${diff}px))`;
+        }, { passive: true });
+
+        track.addEventListener("touchend", () => {
+            if (!isDragging) return;
+
+            isDragging = false;
+
+            const diff = touchStartX - touchCurrentX;
+            const threshold = 40;
+
+            // Kembalikan transition
+            track.style.transition = "transform 0.35s ease-out";
+
+            if (Math.abs(diff) > threshold) {
                 if (diff > 0) {
                     moveToSlide(currentIndex + 1);
                 } else {
                     moveToSlide(currentIndex - 1);
                 }
+            } else {
+                // Kalau swipe terlalu pendek, kembali ke posisi semula
+                updateTrackPosition(true);
             }
+
             startAutoPlay();
         });
 
