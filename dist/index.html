@@ -74,7 +74,7 @@
     </style>
 </head>
 
-<body id="pageBody" class="bg-ivory text-ink font-sans m-0 overflow-hidden">
+<body id="pageBody" class="bg-ivory text-ink font-sans m-0 overflow-hidden pb-16">
 
     <!-- ================= COVER / GATE SECTION ================= -->
     <section id="coverGate"
@@ -104,7 +104,6 @@
                 class="mt-8 mb-8 p-5 bg-paper/90 border border-goldBorder rounded-2xl shadow-[0_15px_35px_rgba(110,77,32,0.08)]">
                 <span class="text-xs text-inkMuted block mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
                 <p id="coverGuestName" class="font-serif text-2xl sm:text-3xl text-goldDark font-semibold"></p>
-                </p>
                 <div id="coverBadgeWrapper" class="mt-2.5">
                     <span id="coverGuestCategoryBadge"
                         class="inline-block px-3 py-1 bg-gold/15 text-goldDark text-[10px] tracking-widest uppercase rounded-full font-semibold">
@@ -126,17 +125,73 @@
 
     <!-- ================= KONTEN UTAMA ================= -->
 
-    <!-- Navbar Sticky -->
+    <!-- ================= FLOATING BOTTOM NAV BAR ================= -->
     <nav id="mainNav"
-        class="fixed top-0 left-0 right-0 z-20 bg-paper/90 backdrop-blur-md border-b border-goldBorder/30 hidden">
-        <div
-            class="max-w-6xl mx-auto px-5 py-3.5 flex justify-center items-center gap-3 sm:gap-6 text-[9px] sm:text-[11px] uppercase tracking-[0.12em] text-inkNav overflow-x-auto whitespace-nowrap">
-            <a href="#home" class="hover:text-gold transition-colors">Beranda</a>
-            <a href="#acara" class="hover:text-gold transition-colors">Acara</a>
-            <a href="#lokasi" class="hover:text-gold transition-colors">Lokasi</a>
-            <a href="#gallery" class="hover:text-gold transition-colors">Galeri</a>
-            <a href="#rsvp" class="hover:text-gold transition-colors">Konfirmasi</a>
-            <a href="#gift" class="hover:text-gold transition-colors">Amplop</a>
+        class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-paper/95 backdrop-blur-md border border-goldBorder/60 shadow-[0_10px_30px_rgba(110,77,32,0.18)] rounded-full px-3 sm:px-5 py-2 hidden max-w-[94vw] sm:max-w-md w-auto">
+        <div class="flex items-center justify-center gap-1.5 sm:gap-3 text-inkNav">
+            <!-- Beranda -->
+            <a href="#home"
+                class="flex flex-col items-center justify-center px-2 py-1 rounded-2xl hover:text-gold hover:bg-gold/10 transition group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current stroke-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <span class="text-[9px] sm:text-[10px] tracking-tight font-medium mt-0.5">Beranda</span>
+            </a>
+
+            <!-- Acara -->
+            <a href="#acara"
+                class="flex flex-col items-center justify-center px-2 py-1 rounded-2xl hover:text-gold hover:bg-gold/10 transition group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current stroke-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="16" y1="2" x2="16" y2="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="8" y1="2" x2="8" y2="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="3" y1="10" x2="21" y2="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[9px] sm:text-[10px] tracking-tight font-medium mt-0.5">Acara</span>
+            </a>
+
+            <!-- Lokasi -->
+            <a href="#lokasi"
+                class="flex flex-col items-center justify-center px-2 py-1 rounded-2xl hover:text-gold hover:bg-gold/10 transition group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current stroke-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-4.35-7-10a7 7 0 0114 0c0 5.65-7 10-7 10z"/>
+                    <circle cx="12" cy="11" r="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[9px] sm:text-[10px] tracking-tight font-medium mt-0.5">Lokasi</span>
+            </a>
+
+            <!-- Galeri -->
+            <a href="#gallery"
+                class="flex flex-col items-center justify-center px-2 py-1 rounded-2xl hover:text-gold hover:bg-gold/10 transition group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current stroke-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[9px] sm:text-[10px] tracking-tight font-medium mt-0.5">Galeri</span>
+            </a>
+
+            <!-- RSVP -->
+            <a href="#rsvp"
+                class="flex flex-col items-center justify-center px-2 py-1 rounded-2xl hover:text-gold hover:bg-gold/10 transition group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current stroke-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span class="text-[9px] sm:text-[10px] tracking-tight font-medium mt-0.5">RSVP</span>
+            </a>
+
+            <!-- Amplop -->
+            <a href="#gift"
+                class="flex flex-col items-center justify-center px-2 py-1 rounded-2xl hover:text-gold hover:bg-gold/10 transition group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current stroke-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <polyline points="20 12 20 22 4 22 4 12" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="2" y="7" width="20" height="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="12" y1="22" x2="12" y2="7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-[9px] sm:text-[10px] tracking-tight font-medium mt-0.5">Amplop</span>
+            </a>
         </div>
     </nav>
 
@@ -254,6 +309,43 @@
                         <a class="inline-flex items-center justify-center px-5 py-2.5 border border-gold rounded-full text-goldDark font-semibold text-xs tracking-wide hover:bg-gold hover:text-white transition"
                             target="_blank" href="https://share.google/j0V7PsyMwFS6tsyyS">
                             Buka Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LOKASI SECTION ================= -->
+    <section id="lokasi" class="pb-20">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-10">
+                <div class="text-[11px] tracking-[0.28em] uppercase text-gold font-medium">Lokasi</div>
+                <h2 class="font-serif text-4xl sm:text-5xl my-2 font-normal">See You There</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 items-stretch">
+                <div class="h-80 rounded-3xl bg-[#e9dfcf] border border-lineColor grid place-items-center text-center p-6">
+                    <div class="max-w-md">
+                        <div class="text-2xl text-gold mb-2">⌖</div>
+                        <h3 class="font-serif text-2xl font-normal mb-1">GKI Maulana Yusuf</h3>
+                        <p class="text-xs text-inkMuted leading-relaxed mb-4">Bakal Jemaat Kawaluyaan<br>08.30 WIB</p>
+                        <a class="inline-flex items-center justify-center px-5 py-2.5 bg-gold text-white border border-gold rounded-full font-semibold text-xs tracking-wide hover:opacity-90 transition" 
+                            target="_blank" href="https://share.google/tMvZXZYjp9We7z9h7">
+                            Buka di Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="h-80 rounded-3xl bg-[#e9dfcf] border border-lineColor grid place-items-center text-center p-6">
+                    <div class="max-w-md">
+                        <div class="text-2xl text-gold mb-2">⌖</div>
+                        <h3 class="font-serif text-2xl font-normal mb-1">Gedung Serba Guna Maduma Naramamora</h3>
+                        <p class="text-xs text-inkMuted leading-relaxed mb-1">Acara Adat Nikah<br>11.00 WIB – selesai</p>
+                        <p class="text-[11px] text-goldDark font-semibold mb-4" id="mapFloorHighlight">Area Tenda / Lantai 1</p>
+                        <a class="inline-flex items-center justify-center px-5 py-2.5 bg-gold text-white border border-gold rounded-full font-semibold text-xs tracking-wide hover:opacity-90 transition" 
+                            target="_blank" href="https://share.google/j0V7PsyMwFS6tsyyS">
+                            Buka di Google Maps
                         </a>
                     </div>
                 </div>
@@ -461,44 +553,63 @@
         <p class="text-xs text-inkMuted leading-relaxed">Terima kasih atas doa, kasih, dan kehadiran Anda.</p>
     </footer>
 
-    <!-- Floating Audio Control Button -->
-    <div class="fixed right-5 bottom-5 z-30">
+    <!-- Floating Audio Control Button (Dinaikkan sedikit ke bottom-24 agar tidak bentrok dengan floating nav) -->
+    <div class="fixed right-5 bottom-24 z-30">
         <button id="musicBtn" aria-label="Putar musik" onclick="toggleMusic()"
             class="w-12 h-12 rounded-full border border-gold bg-[#fffaf2] text-gold shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition">
             ♫
         </button>
     </div>
 
-    <!-- ================= DUAL AUDIO ENGINE (HTML5 Native + YT Fallback) ================= -->
-    <!-- 1. HTML5 Native Audio: Anda dapat mengganti src dengan 'music.mp3' di folder web Anda -->
+    <!-- ================= DUAL AUDIO ENGINE ================= -->
     <audio id="weddingAudio" loop preload="auto">
-        <source src="/public/sounds/song.mp3" type="audio/mpeg">
+        <source src="/sounds/song.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- 2. Iframe Fallback YouTube (Menggunakan IFrame API Resmi agar auto-play tidak diblokir browser) -->
     <div id="ytPlayerContainer" class="fixed -left-[9999px] -bottom-[9999px] opacity-0 pointer-events-none">
         <div id="ytPlayer"></div>
     </div>
 
-    <!-- Load YouTube Iframe API -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <!-- ================= SCRIPTS ================= -->
     <script>
         const RSVP_URL = "";
-        const RSVP_WA = "6283821391107";
+        const RSVP_WA = "6281312039585";
         let attendance = true;
         let guestCount = 1;
         const target = new Date("2026-12-12T08:30:00+07:00").getTime();
 
         let isAudioPlaying = false;
+        let ytPlayer = null;
+        let useYTFallback = false;
         const audioElement = document.getElementById("weddingAudio");
         const musicBtn = document.getElementById("musicBtn");
 
+        function onYouTubeIframeAPIReady() {
+            ytPlayer = new YT.Player('ytPlayer', {
+                height: '1',
+                width: '1',
+                videoId: 'KNZH-emehxA',
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'loop': 1,
+                    'playlist': 'KNZH-emehxA',
+                    'playsinline': 1
+                },
+                events: {
+                    'onReady': () => {
+                        audioElement.addEventListener('error', () => {
+                            useYTFallback = true;
+                        });
+                    }
+                }
+            });
+        }
 
         // Fungsi Play Musik
         function playMusic() {
-            // Coba putar audio HTML5 terlebih dahulu (bebas lag dan responsif)
             const playPromise = audioElement.play();
 
             if (playPromise !== undefined) {
@@ -507,8 +618,18 @@
                     useYTFallback = false;
                     updateMusicButtonState(true);
                 }).catch(() => {
-
+                    if (ytPlayer && typeof ytPlayer.playVideo === "function") {
+                        ytPlayer.playVideo();
+                        isAudioPlaying = true;
+                        useYTFallback = true;
+                        updateMusicButtonState(true);
+                    }
                 });
+            } else if (ytPlayer && typeof ytPlayer.playVideo === "function") {
+                ytPlayer.playVideo();
+                isAudioPlaying = true;
+                useYTFallback = true;
+                updateMusicButtonState(true);
             }
         }
 
@@ -690,7 +811,6 @@
             touchCurrentX = touchStartX;
             isDragging = true;
 
-            // Matikan transition saat user sedang swipe
             track.style.transition = "none";
         }, { passive: true });
 
@@ -702,7 +822,6 @@
             const diff = touchCurrentX - touchStartX;
             const width = getSlideWidth();
 
-            // Gerakkan carousel mengikuti jari
             track.style.transform =
                 `translateX(calc(-${currentIndex * width}px + ${diff}px))`;
         }, { passive: true });
@@ -715,7 +834,6 @@
             const diff = touchStartX - touchCurrentX;
             const threshold = 40;
 
-            // Kembalikan transition
             track.style.transition = "transform 0.35s ease-out";
 
             if (Math.abs(diff) > threshold) {
@@ -725,7 +843,6 @@
                     moveToSlide(currentIndex - 1);
                 }
             } else {
-                // Kalau swipe terlalu pendek, kembali ke posisi semula
                 updateTrackPosition(true);
             }
 
@@ -833,7 +950,7 @@
             document.getElementById("guestCount").textContent = guestCount;
         }
 
-        // 8. Kirim Konfirmasi ke WA (Diperbaiki agar pesan tidak terpotong)
+        // 8. Kirim Konfirmasi ke WA
         function sendRSVP() {
             const nameInput = document.getElementById("rsvpName");
             const wishInput = document.getElementById("rsvpWish");
@@ -882,15 +999,10 @@
 
             const encodedMessage = encodeURIComponent(textMessage);
 
-            // Buka WhatsApp terlebih dahulu
             window.open(
                 `https://api.whatsapp.com/send/?phone=${RSVP_WA}&text=${encodedMessage}`,
                 "_blank"
             );
-
-            // =========================
-            // CLEAR FORM / DRAFT
-            // =========================
 
             nameInput.value = "";
             wishInput.value = "";
@@ -901,18 +1013,15 @@
                     input.checked = false;
                 });
 
-            // Reset status kehadiran
             attendance = false;
-
-            // Reset jumlah tamu
             guestCount = 1;
 
-            // Kalau ada tampilan jumlah tamu
             const guestCountElement = document.getElementById("guestCount");
             if (guestCountElement) {
                 guestCountElement.textContent = guestCount;
             }
-        }    </script>
+        }
+    </script>
 </body>
 
 </html>
